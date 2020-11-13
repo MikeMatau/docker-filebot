@@ -23,10 +23,9 @@ echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
 
 # Filebot requires Java 8. UI doesn't work with openjdk, so we use Oracle Java. (Gives an error when trying to rename a
 # file.)
-add-apt-repository ppa:webupd8team/java
-add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install python-software-properties
+add-apt-repository ppa:webupd8team/java \
+sudo apt-get update \
+sudo apt-get install python-software-properties \
 sudo apt-get install oracle-java8-installer
 
 RUN true && \
